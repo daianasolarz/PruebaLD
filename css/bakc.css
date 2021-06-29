@@ -1,0 +1,413 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ECBDBA;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    font-family: 'Merriweather', serif;
+}
+
+.item {
+    transition: all 0.5s;
+}
+
+
+.item:hover {
+    transform: scale(1.5);
+}
+
+.Carrito {
+    transition: all 0.5s;
+}
+
+.Carrito:hover {
+    transform: rotate(50deg);
+}
+
+.Lei {
+    height: 20rem;
+   }
+
+   .titulos{
+    background-color: rgb(155, 127, 148);
+    border-radius: 7rem;
+    padding: 6rem;
+    text-decoration: none;
+    font-size: larger;
+    color: honeydew;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: large;
+    border: none;
+    display: flex;
+    transition: all 0.5s;
+  }
+ 
+
+/* Titulos de cada página */
+h1 {
+    color: rgba(104, 79, 98, 0.829);
+    font-style: oblique;
+    text-decoration-color: thistle;
+    text-anchor: middle;
+    text-decoration: underline;
+    margin-bottom: 30px;
+    font-size: medium;
+}
+
+h3 {
+    color: rgba(104, 79, 98, 0.829);
+    font-style: oblique;
+    text-decoration-color: thistle;
+    text-anchor: middle;
+    text-decoration: underline;
+    font-size: medium;
+}
+
+
+
+/* css para los iconos*/
+
+ .section-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 100px;
+}
+
+
+.volver {
+    margin: 13rem;
+    text-decoration: none;
+    color: black;
+    font-family: sans-serif;
+}
+
+.sublink {
+    text-decoration: none;
+    color: rgb(110, 93, 93);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.link:hover {
+    text-decoration: none;
+    color: rgba(180, 146, 146, 0.493);
+}
+
+.link:visited {
+    text-decoration: none;
+    color: black;
+}
+
+.sublink:hover {
+    text-decoration: none;
+    color: rgba(180, 146, 146, 0.493);
+}
+
+/* CSS para botones en el carrito */
+button {
+    background: border-box;
+    border-radius: 40px;
+    border-style: groove;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: black;
+    padding: 5px;
+    cursor: pointer;
+    margin: 15px 41px;
+    display: flex;
+}
+
+ .card {
+    height: 400px;
+}
+
+.animate__animated.animate__backinRight,
+.animate__animated.animate__backinRight {
+    --animate-duration: 2s;
+}
+
+
+
+.Titlesprod {
+    color: rgb(87, 10, 46);
+    font-size: medium;
+    text-decoration: inherit;
+    text-overflow: clip;
+    padding-top: 16px;
+   font-size: medium;
+    
+}
+
+.oreo h2 {
+    color: rgb(87, 10, 46);
+    font-size: medium;
+    text-decoration: inherit;
+    text-overflow: clip;
+ }
+
+.chocotorta h2 {
+    color: rgb(87, 10, 46);
+    font-size: medium;
+    text-decoration: inherit;
+    text-overflow: clip;
+    padding-top: 16px;
+}
+
+.brownie h2 {
+    color: rgb(87, 10, 46);
+    font-size: medium;
+    text-decoration: inherit;
+    text-overflow: clip;
+    text-anchor: middle;
+    font-size: medium;
+  }
+
+
+ .cuadrado {
+    background-color: rgba(255, 255, 255, 0.616);}
+  
+.cuadrado3 {
+    background-color: rgba(255, 255, 255, 0.616);
+    padding: 20px 39px;
+    margin-bottom: 5px;
+    border-radius: 5%;
+    width: 1000px;
+    height: 300px;
+}
+   
+
+    
+.choco {
+    margin: -13.5rem 43rem;
+    width: 194px;
+    height: 192px;
+    float: left;
+} 
+
+.link{
+    text-decoration: none;
+    color: rgb(110, 93, 93);}
+
+
+.redes {
+    text-decoration: none;
+    color: rgb(110, 93, 93);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 1rem;
+    margin-top: 5rem;
+    text-align: justify;
+}
+
+.foot {
+    padding: 1rem;
+}
+
+/* FOOTER */
+
+footer {
+    background-color: rgb(156, 150, 150);
+    color: rgba(255, 255, 255, 0.658);
+    border-top: 2px solid black;
+    width: 100%;
+    height: 120px;
+    background-image: linear-gradient(to right, black, grey, pink);
+}
+
+/* ICONO WAP */
+.wap {
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    z-index: 999;
+}
+
+.wp {
+    width: 3rem;
+    height: 3rem;
+}
+
+/* grids */
+.body-grid {
+    display: grid;
+    grid-template-columns: 15rem 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    height: 100vh;
+    width: 100%;
+    row-gap: 50px;
+
+
+    grid-template-areas:
+        "logo nav"
+        "espacio slider"
+        "espacio nosotros"
+        "footer footer";
+}
+
+.lista {
+    grid-area: nav;
+}
+
+.logo {
+    grid-area: logo;
+}
+
+.espacio {
+    grid-area: espacio;
+}
+
+.slider-container {
+    grid-area: slider;
+}
+
+.sobrenos-container {
+    grid-area: nosotros;
+}
+
+footer {
+    grid-area: footer;
+}
+
+.home .icon {
+    display: none;
+}
+
+/* RESPONSIVE*/
+@media only screen and (min-width:640px) and (max-width:1240px) {
+
+
+    .item {
+        width: 200px;
+        height: 200px;
+    }
+
+    .slider-container {
+        grid-area: slider;
+    }
+
+    .home {
+        position: relative;
+    }
+
+    .home .icon {
+        position: absolute;
+        left: 35rem;
+        bottom: 3rem;
+        display: block;
+    }
+
+    .home .Carrito {
+        position: absolute;
+        left: 32rem;
+        bottom: 3rem;
+        display: block;
+    }
+
+    .home ul li {
+        display: none;
+    }
+
+    .icon:hover .link {
+        float: none;
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        cursor: pointer;
+    }
+
+    .lista {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        left: 447px;
+        bottom: 41px;
+    }
+
+    .home {
+        margin-left: 16rem;
+        margin-top: 1rem;
+    }
+
+    .submenu {
+        display: none;
+    }
+
+    .sobrenos-container a {
+        right: 42rem;
+        top: 5rem;
+    }
+}
+
+@media only screen and (max-width: 639px) {
+    .body-grid {
+        display: grid;
+        grid-template-columns: 12rem 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        height: 100vh;
+        width: 100%;
+        row-gap: 50px;
+
+
+        grid-template-areas:
+            "logo nav"
+            "espacio slider"
+            "espacio nosotros"
+            "footer footer";
+    }
+
+    .home .icon {
+        left: 32rem;
+        position: absolute;
+        bottom: 3rem;
+        display: block;
+    }
+
+    .slider {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .home .Carrito {
+        position: absolute;
+        left: 30rem;
+        bottom: 3rem;
+        display: block;
+    }
+
+    .home ul li {
+        display: none;
+    }
+
+    .icon:active .lista {
+        float: none;
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        cursor: pointer;
+    }
+
+    .lista {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        right: 106px;
+    }
+
+    .home {
+        margin-top: 2rem;
+    }
+
+
+    .noencel {
+        display: none;
+    }
+
+    .submenu {
+        display: none;
+    }
+
+}

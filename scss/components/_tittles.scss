@@ -1,0 +1,10 @@
+/* Titulos de cada página */
+h1 {
+    @extend %Titulosprinc;
+    margin-bottom: 30px;
+  
+}
+
+h3 {
+   @extend %Titulosprinc;
+}

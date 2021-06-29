@@ -1,0 +1,274 @@
+@charset "UTF-8";
+/* Nesting o Anidamiento */
+footer {
+  background-color: #9c9696;
+  color: rgba(255, 255, 255, 0.658);
+  border-top: 2px solid black;
+  width: 100%;
+  height: 130px;
+  background-image: linear-gradient(to right, black, grey, pink);
+}
+footer .foot {
+  padding: 1rem;
+}
+footer .foot .redes {
+  text-decoration: none;
+  color: #6e5d5d;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  padding: 1rem;
+  margin-top: 5rem;
+  text-align: justify;
+}
+
+/* ICONO WAP */
+.wap {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 999;
+}
+
+.wp {
+  width: 3rem;
+  height: 3rem;
+}
+
+/* Mixin */
+.section-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 100px;
+}
+.section-container .titulos {
+  background-color: #9b7f94;
+  border-radius: 7rem;
+  padding: 6rem;
+  text-decoration: none;
+  font-size: larger;
+  color: honeydew;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: large;
+  border: none;
+  display: flex;
+  transition: all 0.5s;
+  /* Colores SASS */
+}
+.section-container .titulos:hover {
+  color: #483944;
+}
+@media screen and (max-width: 990px) {
+  .section-container .titulos {
+    border-radius: 7rem;
+    padding: 2rem;
+    margin: 0;
+  }
+}
+@media screen and (max-width: 765px) {
+  .section-container .titulos {
+    border-radius: 7rem;
+    padding: 1rem;
+    margin: 0;
+  }
+}
+.section-container .titulos .animate__rotateIn {
+  --animate-duration: 2s;
+}
+
+.card .card-img-top {
+  width: 100%;
+}
+.card:hover {
+  box-shadow: 5px 5px rgba(116, 110, 110, 0.411);
+}
+
+/* CSS para botones en el carrito */
+button {
+  background: border-box;
+  border-radius: 40px;
+  border-style: groove;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  color: black;
+  padding: 5px;
+  cursor: pointer;
+  margin: 15px 41px;
+  display: flex;
+}
+
+/* CSS PARA GRIDS */
+.body-grid {
+  display: grid;
+  grid-template-columns: 15rem 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  height: 100vh;
+  width: 100%;
+  row-gap: 50px;
+  grid-template-areas: "logo nav" "espacio slider" "espacio nosotros" "footer footer";
+}
+
+.lista {
+  grid-area: nav;
+}
+
+.logo {
+  grid-area: logo;
+}
+
+.espacio {
+  grid-area: espacio;
+}
+
+.slider-container {
+  grid-area: slider;
+}
+
+.sobrenos-container {
+  grid-area: nosotros;
+}
+
+footer {
+  grid-area: footer;
+}
+
+.sublink {
+  text-decoration: none;
+  color: #6e5d5d;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.link:hover {
+  text-decoration: none;
+  color: rgba(180, 146, 146, 0.493);
+}
+
+.link:visited {
+  text-decoration: none;
+  color: black;
+}
+
+.sublink:hover {
+  text-decoration: none;
+  color: rgba(180, 146, 146, 0.493);
+}
+
+/* CSS PARA RECETAS */
+.Titlesprod {
+  padding-top: 16px;
+}
+
+.chocotorta h2 {
+  padding-top: 16px;
+}
+
+.brownie {
+  background-color: rgba(255, 255, 255, 0.616);
+}
+/* .cuadrado {
+    background-color: rgba(255, 255, 255, 0.616);}
+
+.cuadrado3 {
+    background-color: rgba(255, 255, 255, 0.616);
+    padding: 20px 39px;
+    margin-bottom: 5px;
+    border-radius: 5%;
+    width: 1000px;
+    height: 300px;
+} */
+.choco {
+  margin: -13.5rem 43rem;
+  width: 194px;
+  height: 192px;
+  float: left;
+}
+
+.animate__animated.animate__backinRight,
+.animate__animated.animate__backinRight {
+  --animate-duration: 2s;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+/* Mixin */
+body {
+  background-color: #ECBDBA;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  font-family: "Merriweather", serif;
+}
+
+.item {
+  transition: all 0.5s;
+}
+.item:hover {
+  -webkit-transform: scale(1.5);
+  -o-transform: scale(1.5);
+  -moz-transform: scale(1.5);
+  transform: scale(1.5);
+}
+
+video {
+  height: 70vh;
+}
+
+.cartel {
+  font-size: 25px;
+  text-align: center;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.modal {
+  background-color: rgba(184, 143, 172, 0.774);
+}
+
+.modal-content {
+  background-color: #f7e5f4;
+}
+
+.Carrito {
+  transition: all 0.5s;
+}
+.Carrito:hover {
+  transform: rotate(50deg);
+}
+
+.Lei {
+  height: 20rem;
+}
+
+/* Titulos de cada página */
+h1 {
+  margin-bottom: 30px;
+}
+
+/* Extend */
+.Titlesprod, .oreo h2, .chocotorta h2, .brownie h2 {
+  color: #570a2e;
+  font-size: large;
+  text-decoration: inherit;
+  text-overflow: clip;
+}
+
+h1, h3 {
+  color: rgba(104, 79, 98, 0.829);
+  font-style: oblique;
+  text-decoration-color: thistle;
+  text-anchor: middle;
+  text-decoration: underline;
+  font-size: medium;
+}
+
+.invitacion {
+  color: #302a2a;
+  font-size: medium;
+  font-family: "Merriweather", serif;
+}
+.invitacion h1 {
+  font-size: xx-large;
+}
+
+/*# sourceMappingURL=style.css.map */

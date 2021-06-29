@@ -1,0 +1,50 @@
+
+
+/* CSS PARA RECETAS */
+.Titlesprod {
+    @extend %TitulosRecetas;
+    padding-top: 16px;   
+}
+
+.oreo h2 {
+    @extend %TitulosRecetas;
+ }
+
+.chocotorta h2 {
+    @extend %TitulosRecetas;
+    padding-top: 16px;
+}
+
+.brownie{
+    background-color:rgba(255, 255, 255, 0.616);
+
+    h2 {
+    @extend %TitulosRecetas;
+  }
+}
+
+ /* .cuadrado {
+    background-color: rgba(255, 255, 255, 0.616);}
+  
+.cuadrado3 {
+    background-color: rgba(255, 255, 255, 0.616);
+    padding: 20px 39px;
+    margin-bottom: 5px;
+    border-radius: 5%;
+    width: 1000px;
+    height: 300px;
+} */
+   
+
+    
+.choco {
+    margin: -13.5rem 43rem;
+    width: 194px;
+    height: 192px;
+    float: left;
+} 
+
+.animate__animated.animate__backinRight,
+.animate__animated.animate__backinRight {
+    --animate-duration: 2s;
+}

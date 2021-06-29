@@ -1,0 +1,70 @@
+/* Mixin */
+@mixin Circulos($bgcolor,$padding){
+  background-color: $bgcolor;
+  border-radius: 7rem;
+  padding: $padding;
+}
+
+.section-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 100px;  
+
+  .titulos {
+    @include Circulos(#9b7f94,6rem);
+    text-decoration: none;
+    font-size: larger;
+    color: honeydew;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: large;
+    border: none;
+    display: flex;
+    transition: all 0.5s;
+    
+    /* Colores SASS */
+    &:hover {
+      color:darken(#9b7f94, 30%);}
+  
+
+  @media screen and (max-width: 990px) {
+      border-radius: 7rem;
+      padding: 2rem;
+      margin: 0;
+  }
+
+  @media screen and (max-width: 765px) {
+   border-radius: 7rem;
+   padding: 1rem;
+    margin: 0;
+  }
+
+    .animate__rotateIn {
+      --animate-duration: 2s;
+    }
+  }
+}
+
+.card {
+  .card-img-top {
+    width: 100%
+  }
+
+  &:hover {
+    box-shadow: 5px 5px rgba(116, 110, 110, 0.411);
+  }
+}
+
+/* CSS para botones en el carrito */
+button {
+  background: border-box;
+  border-radius: 40px;
+  border-style: groove;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: black;
+  padding: 5px;
+  cursor: pointer;
+  margin: 15px 41px;
+  display: flex;
+}
