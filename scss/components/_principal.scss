@@ -20,9 +20,13 @@ body {
 .item {
     transition: all 0.5s;
 
-    &:hover{
-        @include Prefijos(scale(1.5));
+    @media screen  and (min-width: 765px){ 
+        &:hover{
+            @include Prefijos(scale(1.5));
+        } 
     }
+
+  
 }
 video{
     height: 70vh;

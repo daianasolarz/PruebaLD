@@ -204,11 +204,13 @@ body {
 .item {
   transition: all 0.5s;
 }
-.item:hover {
-  -webkit-transform: scale(1.5);
-  -o-transform: scale(1.5);
-  -moz-transform: scale(1.5);
-  transform: scale(1.5);
+@media screen and (min-width: 765px) {
+  .item:hover {
+    -webkit-transform: scale(1.5);
+    -o-transform: scale(1.5);
+    -moz-transform: scale(1.5);
+    transform: scale(1.5);
+  }
 }
 
 video {
