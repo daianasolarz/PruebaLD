@@ -237,6 +237,11 @@ video {
 .Carrito:hover {
   transform: rotate(50deg);
 }
+@media screen and (max-width: 963px) {
+  .Carrito:hover {
+    transform: rotate(5deg);
+  }
+}
 
 .Lei {
   height: 20rem;

@@ -53,6 +53,13 @@ video{
     &:hover{
         transform: rotate(50deg);
     }
+
+    @media screen and (max-width: 963px){
+        &:hover{
+            transform: rotate(5deg);
+        }
+    }
+        
 }
 
 .Lei {
