@@ -1,14 +1,16 @@
-*{
+* {
     padding: 0;
     margin: 0;
 }
+
 /* Mixin */
-@mixin Prefijos ($propiedad){
--webkit-transform: $propiedad;
--o-transform: $propiedad;
--moz-transform: $propiedad;
-transform: $propiedad;
+@mixin Prefijos ($propiedad) {
+    -webkit-transform: $propiedad;
+    -o-transform: $propiedad;
+    -moz-transform: $propiedad;
+    transform: $propiedad;
 }
+
 body {
     background-color: #ECBDBA;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -17,51 +19,56 @@ body {
     font-family: 'Merriweather', serif;
 
 }
+
+.animate__animated.animate__headShake {
+    --animate-duration: 3s;
+}
+
 .item {
     transition: all 0.5s;
 
-    @media screen  and (min-width: 765px){ 
-        &:hover{
-            @include Prefijos(scale(1.5));
-        } 
+    @media screen and (min-width: 765px) {
+        &:hover {
+            @include Prefijos(scale(1.2));
+        }
     }
 
-  
+
 }
-video{
+
+video {
     height: 70vh;
 }
 
-.cartel{
+.cartel {
     font-size: 25px;
     text-align: center;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 
-    }
+}
 
-.modal{
-    
-    background-color: rgba(184, 143, 172, 0.774);}
+.modal {
 
-.modal-content{
+    background-color: rgba(184, 143, 172, 0.774);
+}
+
+.modal-content {
     background-color: rgb(247, 229, 244);
-    }
+}
 
 .Carrito {
     transition: all 0.5s;
 
-    &:hover{
+    &:hover {
         transform: rotate(50deg);
     }
 
-    @media screen and (max-width: 963px){
-        &:hover{
-            transform: rotate(5deg);
+    @media screen and (max-width: 963px) {
+        &:hover {
+            transform: rotate(2deg);
         }
     }
-        
 }
-
 .Lei {
     height: 20rem;
-   }
+}

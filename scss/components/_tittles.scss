@@ -2,9 +2,10 @@
 h1 {
     @extend %Titulosprinc;
     margin-bottom: 30px;
-  
+
 }
 
+h2,
 h3 {
-   @extend %Titulosprinc;
+    @extend %Titulosprinc;
 }

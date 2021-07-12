@@ -1,5 +1,5 @@
 /* Mixin */
-@mixin Circulos($bgcolor,$padding){
+@mixin Circulos($bgcolor, $padding) {
   background-color: $bgcolor;
   border-radius: 7rem;
   padding: $padding;
@@ -9,10 +9,10 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  margin-top: 100px;  
+  margin-top: 100px;
 
   .titulos {
-    @include Circulos(#9b7f94,6rem);
+    @include Circulos(#9b7f94, 6rem);
     text-decoration: none;
     font-size: larger;
     color: honeydew;
@@ -22,23 +22,24 @@
     border: none;
     display: flex;
     transition: all 0.5s;
-    
+
     /* Colores SASS */
     &:hover {
-      color:darken(#9b7f94, 30%);}
-  
+      color: darken(#9b7f94, 30%);
+    }
 
-  @media screen and (max-width: 990px) {
+
+    @media screen and (max-width: 990px) {
       border-radius: 7rem;
       padding: 2rem;
       margin: 0;
-  }
+    }
 
-  @media screen and (max-width: 765px) {
-   border-radius: 7rem;
-   padding: 1rem;
-    margin: 0;
-  }
+    @media screen and (max-width: 765px) {
+      border-radius: 7rem;
+      padding: 1rem;
+      margin: 0;
+    }
 
     .animate__rotateIn {
       --animate-duration: 2s;

@@ -3,12 +3,17 @@ footer {
     color: rgba(255, 255, 255, 0.658);
     border-top: 2px solid black;
     width: 100%;
-    height:130px;
+    height: 130px;
     background-image: linear-gradient(to right, black, grey, pink);
-    .foot{
+
+    a{
+        text-decoration: none;
+    }
+
+    .foot {
         padding: 1rem;
-   
-        .redes{
+
+        .redes,.a{
             text-decoration: none;
             color: rgb(110, 93, 93);
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
