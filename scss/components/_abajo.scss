@@ -1,0 +1,40 @@
+footer {
+    background-color: rgb(156, 150, 150);
+    color: rgba(255, 255, 255, 0.658);
+    border-top: 2px solid black;
+    width: 100%;
+    height: 130px;
+    background-image: linear-gradient(to right, black, grey, pink);
+
+    a{
+        text-decoration: none;
+        color: rgb(192, 179, 179);
+    }
+
+    .foot {
+        padding: 1rem;
+
+        .redes,.a{
+            text-decoration: none;
+            color: rgb(110, 93, 93);
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            padding: 1rem;
+            margin-top: 5rem;
+            text-align: justify;
+        }
+    }
+}
+
+/* ICONO WAP */
+
+.wap {
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    z-index: 999;
+}
+
+.wp {
+    width: 3rem;
+    height: 3rem;
+}

@@ -5,35 +5,40 @@ footer {
     width: 100%;
     height: 130px;
     background-image: linear-gradient(to right, black, grey, pink);
-
-    a{
-        text-decoration: none;
-    }
-
+  
     .foot {
-        padding: 1rem;
-
-        .redes,.a{
-            text-decoration: none;
-            color: rgb(110, 93, 93);
-            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-            padding: 1rem;
-            margin-top: 5rem;
-            text-align: justify;
+      padding: 0.5rem;
+  
+      .icono {
+        text-decoration: none;
+        color: rgb(172, 169, 169);
+      }
+  
+      .redes {
+        text-decoration: none;
+        color: rgb(110, 93, 93);
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+        padding: 0.5rem;
+        margin-top: 5rem;
+        text-align: justify;
+      }
+  
+      /* ICONO WAP */
+  
+      .wap {
+        text-decoration: none;
+        position: fixed;
+        right: 1rem;
+        bottom: 1rem;
+        z-index: 999;
+        width: 8%;
+        height: 50px;
+  
+        & .wp {
+          width: 100%;
+          height: 100%;
         }
+      }
     }
-}
-
-/* ICONO WAP */
-
-.wap {
-    position: fixed;
-    right: 1rem;
-    bottom: 1rem;
-    z-index: 999;
-}
-
-.wp {
-    width: 3rem;
-    height: 3rem;
-}
+  }
