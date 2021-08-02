@@ -20,5 +20,4 @@ if(año == 2018){
 } 
 else {
     alert ("Intentalo nuevamente! :(")
-}
-
+}    
