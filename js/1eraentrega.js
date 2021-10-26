@@ -95,12 +95,12 @@ const nuevoProducto = () => {
     let nombretorta = prompt("Cual es nombre de la torta?");
     let precioTorta = Number(prompt("Cual es el precio de la torta?"));
     let ranking = parseInt(prompt("Qué ranking tiene?"));
-    let tipo = prompt("Es una torta o un producto especial?")
+    let tipo = prompt("Es una torta o un producto especial?").toLowerCase();
 
     const productoNuevo = new Productos(nombretorta, precioTorta, ranking, tipo);
     alert("El nuevo producto es " + nombretorta);
 
-    if ((productoNuevo.tipo === "torta") || (productoNuevo.tipo === "Torta")) {
+    if ((productoNuevo.tipo === "torta") || (productoNuevo.tipo === "tortas")) {
         tortas.push(productoNuevo);
     } else {
         especiales.push(productoNuevo);
@@ -112,3 +112,5 @@ nuevoProducto()
 console.log(tortas)
 console.log (especiales)
 /* ___________________________________________________________________ */
+
+ 
