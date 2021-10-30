@@ -3,7 +3,8 @@ const tortas = [{
         precio: 1480,
         ranking: 1,
         tipo: "tortas",
-    },
+
+        },
     {
         nombre: "maracuya",
         precio: 2580,
@@ -88,6 +89,10 @@ class Productos {
         this.precio = precio;
         this.ranking = ranking;
         this.tipo = tipo;
+
+        this.resumen = () => {
+            alert (`Has creado una nueva torta llamada ${nombre} con $ ${precio} y con N° de Ranking ${ranking}`)
+        } 
     }
 }
 
@@ -98,13 +103,15 @@ const nuevoProducto = () => {
     let tipo = prompt("Es una torta o un producto especial?").toLowerCase();
 
     const productoNuevo = new Productos(nombretorta, precioTorta, ranking, tipo);
-    alert("El nuevo producto es " + nombretorta);
+    productoNuevo.resumen ()
 
     if ((productoNuevo.tipo === "torta") || (productoNuevo.tipo === "tortas")) {
         tortas.push(productoNuevo);
     } else {
         especiales.push(productoNuevo);
     }
+
+
 
 }
 
