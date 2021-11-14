@@ -40,7 +40,7 @@ function mostrarCarrito(array){
                 <th scope="row">${i++}</th>
                 <td>${e.nombre}</td>
                 <td>${e.precio}</td>
-            </tr>`        
+            </tr>` ;   
     }}
   
     function agregarStorage(producto){
@@ -56,7 +56,16 @@ function mostrarCarrito(array){
         let productoSelec=Productos.find(e=> e.id == id);
         guardarStorage(agregarStorage(productoSelec));
         mostrarCarrito(JSON.parse(localStorage.getItem("carrito")));
-        sumarProductos();
+        ;
     }
 
-mostrarProd(Productos)
+    mostrarProd(Productos)
+
+    
+let carro = document.getElementById("Carrito")
+respuestaClick = () => { 
+alert (`Tu carrito tiene ${localStorage.getItem("carrito")}`)
+}
+carro.addEventListener ("click",respuestaClick)
+
+
