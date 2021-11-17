@@ -1,4 +1,3 @@
-
   $(".Aqui").append('<div class="toggle"><button id="btn1">No ver más</button></div)');
 
   $(".toggle").on("click", function(){
@@ -6,6 +5,5 @@
         {
             $("section").animate({
                 "opacity":2,
-                 "display":none})}
-  
+                 "display":none})};  
          
