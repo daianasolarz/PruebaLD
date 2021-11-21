@@ -1,5 +1,5 @@
-$(() => 
-{ let bienvenida = prompt ("Cómo es tu nombre?")
+$(() => { 
+/*{ let bienvenida = prompt ("Cómo es tu nombre?")
 alert (`Hola ${bienvenida}! Bienvenido a Lei Doiny Cakes!` )
 
 let inicio = document.createElement ("div");
@@ -13,14 +13,21 @@ function inicioSesion () {
 
 $("#prueba").on("click",inicioSesion)
 
-let carro = $("#Carrito")
+ let carro = $("#Carrito")
 respuestaClick = () => { 
 alert (`Tu carrito tiene ${localStorage.getItem("carrito")}`)
 }
 carro.on("click",respuestaClick);
+ */
 
 
-let nombre = $(".nombre").value;
+
+$("#Carrito").on("click",function(){
+    $("#Toggle").slideToggle();
+
+$("#Toggle").fadeIn(3000); 
+
+/* let nombre = $(".nombre").value;
 let mail = $("mail").value;
 
 
@@ -30,8 +37,8 @@ miFormulario.on("click", validarFormulario);
 function validarFormulario(e){
     e.preventDefault();
     console.log(`Los datos ingresados son ${nombre} y ${mail}`);}
-
-})
-
-
  
+})*/
+
+
+});})

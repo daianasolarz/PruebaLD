@@ -14,6 +14,8 @@ const Productos = [{id:1, nombre: "Chocotorta", precio:"$2600", tipo: "torta", i
 
 let containerProductos = document.querySelector("#containerProductos")
 let containerCarrito = document.querySelector("#containerCarrito")
+let carito = document.getElementById("Carrito")
+
 
 function mostrarProd (array) {
     containerProductos.innerHTML = "";
@@ -24,7 +26,7 @@ function mostrarProd (array) {
         <div class="card-body align-items-center">
           <h5 class="card-title m-3">${e.nombre}</h5>
           <p>${e.precio}</p>
-          <button type="button" class="btn btn-dark" onclick="capturar (${e.id})"> Añadir al Carrito</button>
+          <button type="button" class="btn btn-dark" id="comprare" onclick="capturar (${e.id})"> Añadir al Carrito</button>
           </div>
       </div>`
         
@@ -37,35 +39,81 @@ function mostrarCarrito(array){
     for(e of array){
     containerCarrito.innerHTML+=`
             <tr>
-                <th scope="row">${i++}</th>
+                <th scope="row" id="num">${i++}</th>
                 <td>${e.nombre}</td>
                 <td>${e.precio}</td>
-            </tr>` ;   
-    }}
+                <td><button class="btn btn-danger" onclick="quitar(${e.id})">X</button></td>
+            </tr>` ;}  
+
+    containerCarrito.innerHTML+=`
+            <tr>
+                <td class="text-center" colspan="3" >Total</td>
+                <td colspan="2">$<span id="totalCarrito">0</span></td>
+            </tr>
+    `        
+    
+    }
+
   
     function agregarStorage(producto){
-        let storage= localStorage.getItem("carrito") ? JSON.parse(localStorage.getItem("carrito")) : [];
+        let storage= sessionStorage.getItem("carrito") ? JSON.parse(sessionStorage.getItem("carrito")) : [];
         storage.push(producto);
         return storage;
     }
     function guardarStorage(array){
-        localStorage.setItem("carrito", JSON.stringify(array));
+        sessionStorage.setItem("carrito", JSON.stringify(array));
     }
     
+   
     function capturar(id){
         let productoSelec=Productos.find(e=> e.id == id);
         guardarStorage(agregarStorage(productoSelec));
-        mostrarCarrito(JSON.parse(localStorage.getItem("carrito")));
-        ;
+        mostrarCarrito(JSON.parse(sessionStorage.getItem("carrito")));
+        sumarProductos();
+        
     }
 
-    mostrarProd(Productos)
+    function quitar(id){
+        let carrito=JSON.parse(sessionStorage.getItem("carrito"));
+        let carritoFinal=carrito.filter(e=> e.id != id);
+        guardarStorage(carritoFinal);
+        mostrarCarrito(JSON.parse(sessionStorage.getItem("carrito")));
+        sumarProductos();}
+
+    function sumarProductos(){    
+    let suma = 0;
+    let productosCarrito=JSON.parse(sessionStorage.getItem("carrito"))
+    for( e of productosCarrito){          
+      suma += e.precio       
+    }    
+    let total=document.querySelector("#totalCarrito").textContent=suma;   
+    console.log(total)
+    } // Me los concatena en vez de sumarloss    
+               
+    
+
+    mostrarProd(Productos);
+    
+
+
+$(()=>{
+
+   const items = () =>{
+        $("#Carrito").text(`(${(Number($("#num")))})`);     
+ 
+      }     //por que no funciona?
+      items ();
+
+
+    $("#Toggle").slideUp(); 
+
+    $("#Carrito").on("click",function(){
+        $("#Toggle").slideToggle();})
+  
+   
 
     
-let carro = document.getElementById("Carrito")
-respuestaClick = () => { 
-alert (`Tu carrito tiene ${localStorage.getItem("carrito")}`)
-}
-carro.addEventListener ("click",respuestaClick)
+})
+
 
 

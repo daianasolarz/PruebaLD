@@ -5,5 +5,5 @@
         {
             $("section").animate({
                 "opacity":2,
-                 "display":none})};  
+                 "display":"none"})};  
          
