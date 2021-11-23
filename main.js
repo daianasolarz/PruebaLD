@@ -48,8 +48,9 @@ function mostrarCarrito(array){
     containerCarrito.innerHTML+=`
             <tr>
                 <td class="text-center" colspan="3" >Total</td>
-                <td colspan="2">$<span id="totalCarrito">0</span></td>
-            </tr>
+                <div style="display-none" id="totalCarrito"></div>
+                <td colspan="1">$<span id="totalTotal">0</span></td>
+                </tr>
     `        
     
     }
@@ -84,10 +85,14 @@ function mostrarCarrito(array){
     let suma = 0;
     let productosCarrito=JSON.parse(sessionStorage.getItem("carrito"))
     for( e of productosCarrito){          
-      suma += e.precio       
+    suma += Number(e.precio)       
     }    
-    let total=document.querySelector("#totalCarrito").textContent=suma;   
-    console.log(total)
+    let total= Number(document.querySelector("#totalCarrito").innerHTML);   
+
+    suma + total; 
+
+    console.log(suma + total)
+    document.getElementById("totalTotal").innerHTML = suma + total;
     } // Me los concatena en vez de sumarloss    
                
     
@@ -95,25 +100,18 @@ function mostrarCarrito(array){
     mostrarProd(Productos);
     
 
+    $(()=>{ 
 
-$(()=>{
+        $(".btn").on("click", function(){
 
-   const items = () =>{
-        $("#Carrito").html(`(${(Number($("#num")))})`);     
- 
-      }     //por que no funciona?
-      items ();
-
-
-    $("#Toggle").slideUp(); 
-
-    $("#Carrito").on("click",function(){
-        $("#Toggle").slideToggle();})
-  
-   
-
-    
-})
-
-
-
+        let i = Number(document.getElementById("Carrito").innerHTML);
+      
+        i += 1;
+      
+        document.getElementById("Carrito").innerHTML = i;
+      
+        $("#Toggle").slideUp();
+        $("#Carrito").on("click", function () {
+        $("#Toggle").slideToggle();
+        });})
+    })
