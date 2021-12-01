@@ -7,5 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Daiana Solarz",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "sweetalert": "^2.1.2"
+  }
 }
