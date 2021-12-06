@@ -187,14 +187,21 @@ function capturar(id) {
 }
 
 function agregado () {
-    Swal.fire({
-        title: 'Producto Agregado Correctamente',
-        showClass: {
-          popup: 'animate__animated animate__fadeInDown'
-        },
-        hideClass: {
-          popup: 'animate__animated animate__fadeOutUp'
+    const Toast = Swal.mixin({
+        toast: true,
+        position: 'top-end',
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+          toast.addEventListener('mouseenter', Swal.stopTimer)
+          toast.addEventListener('mouseleave', Swal.resumeTimer)
         }
+      })
+      
+      Toast.fire({
+        icon: 'success',
+        title: 'Producto agregado correctamente'
       })
 }
 function quitar(id) {
