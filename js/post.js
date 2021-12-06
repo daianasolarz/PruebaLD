@@ -2,7 +2,7 @@ $(()=>{
 const URL = "js/persona.json"
 
 
-$("#metodoPost").on("click",function(){
+$("#metodoGet").on("click",function(){
     $.get(URL,function(data,status){
         console.log(`Estado: ${status}`);
         console.log (data[1].name);
@@ -17,3 +17,5 @@ $("#metodoPost").on("click",function(){
 })
 
 })
+
+document.getElementById("Carrito").style.color="black";

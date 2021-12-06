@@ -56,8 +56,9 @@ video {
     background-color: rgb(247, 229, 244);
 }
 
-/*.Carrito {
+.Carrito {
     transition: all 0.5s;
+    color: black;
 
     &:hover {
         transform: rotate(50deg);

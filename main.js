@@ -95,11 +95,11 @@ function mostrarProd(array) {
     containerProductos.innerHTML = "";
     array.forEach(e => {
         containerProductos.innerHTML += `
-        <div class="card m-3 align-items-center justify-content-center" style="width: 12rem;">
+        <div class="card m-4 align-items-center justify-content-center" style="width: 15rem;">
         <img src="${e.img}" class="card-img-top" alt="...">
         <div class="card-body align-items-center">
-          <h5 class="card-title m-3">${e.nombre}</h5>
-          <p>$${e.precio}</p>
+          <h5 class="card-title m-5">${e.nombre}</h5>
+          <p class="m-5">$${e.precio}</p>
           <button type="button" class="btn btn-dark" id="comprare" onclick="capturar (${e.id})"> Añadir al Carrito</button>
           </div>
       </div>`
