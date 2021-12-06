@@ -181,9 +181,22 @@ function capturar(id) {
     guardarStorage(agregarStorage(productoSelec));
     mostrarCarrito(JSON.parse(sessionStorage.getItem("carrito")));
     sumarProductos();
+    agregado();
+
 
 }
 
+function agregado () {
+    Swal.fire({
+        title: 'Producto Agregado Correctamente',
+        showClass: {
+          popup: 'animate__animated animate__fadeInDown'
+        },
+        hideClass: {
+          popup: 'animate__animated animate__fadeOutUp'
+        }
+      })
+}
 function quitar(id) {
     let carrito = JSON.parse(sessionStorage.getItem("carrito"));
     let carritoFinal = carrito.filter(e => e.id != id);
